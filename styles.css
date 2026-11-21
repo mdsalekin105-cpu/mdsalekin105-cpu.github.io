@@ -5,3 +5,4 @@
 @font-face{font-family:"Molvi AM";src:url("assets/fonts/MolviAM0.ttf") format("truetype");font-weight:400 700;font-style:normal;font-display:swap}
 .hero-author-name{font-size:clamp(38px,6vw,66px);letter-spacing:0}
 .hero-arabic-name{font-size:clamp(38px,6vw,58px);line-height:1.8}
+@font-face{font-family:"Molvi AM";src:url("MolviAM0.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
