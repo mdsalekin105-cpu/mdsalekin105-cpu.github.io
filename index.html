@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="আবু রাফ‌আন সিরাজের প্রবন্ধ ও গবেষণামূলক প্রকাশনা।">
+  <meta name="author" content="أبو رفعان سراج">
+  <meta name="theme-color" content="#173b31">
+  <title>আবু রাফ‌আন সিরাজ | ইলমি গবেষণা ও প্রবন্ধ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="হোম">
+      <span class="brand-mark">س</span>
+      <span class="brand-copy">
+        <strong>আবু রাফ‌আন সিরাজ</strong>
+        <small>أبو رفعان سراج</small>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">☰</button>
+    <nav id="mainNav">
+      <a href="#home" data-bn="প্রচ্ছদ" data-en="Home" data-ar="الرئيسية">প্রচ্ছদ</a>
+      <a href="#articles" data-bn="প্রবন্ধ" data-en="Articles" data-ar="المقالات">প্রবন্ধ</a>
+      <a href="#research" data-bn="গবেষণার ক্ষেত্র" data-en="Research" data-ar="مجالات البحث">গবেষণার ক্ষেত্র</a>
+      <a href="#library" data-bn="PDF পাঠাগার" data-en="PDF Library" data-ar="المكتبة">PDF পাঠাগার</a>
+      <a href="#contact" data-bn="যোগাযোগ" data-en="Contact" data-ar="اتصل">যোগাযোগ</a>
+      <select id="languageSelect" aria-label="ভাষা নির্বাচন">
+        <option value="bn">বাংলা</option><option value="ar">العربية</option><option value="en">English</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-ornament" aria-hidden="true">۞</div>
+      <div class="hero-inner">
+        <p class="eyebrow" data-bn="ব্যক্তিগত ইলমি গবেষণা ও প্রকাশনা" data-en="PERSONAL SCHOLARLY RESEARCH & PUBLICATIONS" data-ar="البحوث العلمية والمنشورات الشخصية">ব্যক্তিগত ইলমি গবেষণা ও প্রকাশনা</p>
+        <h1 class="hero-author-name">আবু রাফ‌আন সিরাজ</h1>
+        <div class="arabic-motto hero-arabic-name" dir="rtl">أبو رفعان سراج</div>
+        <a class="gold-button" href="#articles" data-bn="প্রবন্ধ পড়ুন" data-en="Explore Articles" data-ar="اقرأ المقالات">প্রবন্ধ পড়ুন <span>←</span></a>
+      </div>
+      <div class="hero-bottom">❧ &nbsp; الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ &nbsp; ❧</div>
+    </section>
+
+    <section class="content-section" id="articles">
+      <div class="section-heading">
+        <div><p class="section-kicker" data-bn="জ্ঞানচর্চা ও আলোচনা" data-en="KNOWLEDGE & DISCUSSION" data-ar="المعرفة والنقاش">জ্ঞানচর্চা ও আলোচনা</p><h2 data-bn="সাম্প্রতিক প্রবন্ধ" data-en="Recent Articles" data-ar="أحدث المقالات">সাম্প্রতিক প্রবন্ধ</h2></div>
+        <a href="#articles" class="text-link" data-bn="সব প্রবন্ধ" data-en="All Articles" data-ar="جميع المقالات">সব প্রবন্ধ ↗</a>
+      </div>
+      <div class="toolbar">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="প্রবন্ধ বা বিষয় অনুসন্ধান করুন..." data-placeholder-bn="প্রবন্ধ বা বিষয় অনুসন্ধান করুন..." data-placeholder-en="Search articles or topics..." data-placeholder-ar="ابحث في المقالات أو الموضوعات..."></label>
+        <select id="categoryFilter" aria-label="বিভাগ নির্বাচন"><option value="">সব বিভাগ</option></select>
+      </div>
+      <div class="article-grid" id="articleGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>এই অনুসন্ধানে কোনো প্রবন্ধ পাওয়া যায়নি।</p>
+    </section>
+
+    <section class="research-section" id="research">
+      <div class="section-heading light-heading">
+        <div><p class="section-kicker">RESEARCH AREAS</p><h2 data-bn="গবেষণার ক্ষেত্রসমূহ" data-en="Fields of Research" data-ar="مجالات البحث">গবেষণার ক্ষেত্রসমূহ</h2></div>
+        <p data-bn="বিষয়ভিত্তিক পাঠ ও গবেষণার জন্য সাজানো বিভাগ।" data-en="Organized areas for focused reading and study." data-ar="أقسام منظمة للقراءة والدراسة المتخصصة.">বিষয়ভিত্তিক পাঠ ও গবেষণার জন্য সাজানো বিভাগ।</p>
+      </div>
+      <div class="research-grid">
+        <a href="#articles" class="research-card"><span>١</span><h3>হাদিস</h3><small>الحديث</small></a>
+        <a href="#articles" class="research-card"><span>٢</span><h3>উলূমুল হাদিস</h3><small>علوم الحديث</small></a>
+        <a href="#articles" class="research-card"><span>٣</span><h3>আরবি ভাষা ও সাহিত্য</h3><small>اللغة العربية وآدابها</small></a>
+        <a href="#articles" class="research-card"><span>٤</span><h3>আকিদা</h3><small>العقيدة</small></a>
+        <a href="#articles" class="research-card"><span>٥</span><h3>গ্রন্থ পর্যালোচনা</h3><small>مراجعة الكتب</small></a>
+        <a href="#articles" class="research-card"><span>٦</span><h3>সমকালীন ইলমি আলোচনা</h3><small>قضايا علمية معاصرة</small></a>
+      </div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="library-icon">۞</div>
+      <div class="library-copy">
+        <p class="section-kicker" data-bn="ডিজিটাল পাঠাগার" data-en="DIGITAL READING ROOM" data-ar="المكتبة الرقمية">ডিজিটাল পাঠাগার</p>
+        <h2 data-bn="গবেষণাপত্র ও PDF পাঠ" data-en="Research Papers & PDF Reading" data-ar="البحوث وقراءة ملفات PDF">গবেষণাপত্র ও PDF পাঠ</h2>
+        <p data-bn="নির্বাচিত PDF ও গবেষণাপত্র ওয়েবসাইটেই পড়ার জন্য সাজানো হবে। সাধারণ ডাউনলোড বাটন থাকবে না।" data-en="Selected PDFs and research papers will be available to read on the website. No ordinary download button will be displayed." data-ar="ستتاح ملفات PDF والبحوث المختارة للقراءة على الموقع دون زر تنزيل عادي.">নির্বাচিত PDF ও গবেষণাপত্র ওয়েবসাইটেই পড়ার জন্য সাজানো হবে। সাধারণ ডাউনলোড বাটন থাকবে না।</p>
+        <span class="coming-soon" data-bn="PDF সংগ্রহ শিগগির যুক্ত হবে" data-en="PDF collection will be added soon" data-ar="ستضاف مجموعة PDF قريباً">PDF সংগ্রহ শিগগির যুক্ত হবে</span>
+      </div>
+    </section>
+
+    <section class="support-section">
+      <div>
+        <p class="section-kicker">SUPPORT SCHOLARLY WORK</p>
+        <h2 data-bn="ইলমি কাজের ধারাবাহিকতায় সহযোগিতা করুন" data-en="Support Continued Scholarly Work" data-ar="ساهم في استمرار العمل العلمي">ইলমি কাজের ধারাবাহিকতায় সহযোগিতা করুন</h2>
+        <p data-bn="ভবিষ্যতে পাঠক-সহযোগিতা ও প্রকাশনা কার্যক্রমের তথ্য এখানে যুক্ত করা হবে।" data-en="Information about reader support and publications will be added here." data-ar="ستضاف هنا معلومات دعم القراء والمنشورات مستقبلاً.">ভবিষ্যতে পাঠক-সহযোগিতা ও প্রকাশনা কার্যক্রমের তথ্য এখানে যুক্ত করা হবে।</p>
+      </div>
+      <a class="outline-button" href="mailto:mdsalekin105@gmail.com">যোগাযোগ করুন ↗</a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main">
+      <div><strong class="footer-name">আবু রাফ‌আন সিরাজ</strong><div class="footer-arabic" dir="rtl">أبو رفعان سراج</div></div>
+      <div><h3>যোগাযোগ</h3><a href="mailto:mdsalekin105@gmail.com">mdsalekin105@gmail.com</a><a href="https://www.facebook.com/share/1Hsyb2ybJz/" target="_blank" rel="noopener">Facebook</a></div>
+      <div><h3>প্রকাশনা</h3><a href="#articles">প্রবন্ধ</a><a href="#library">PDF পাঠাগার</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Abu Raf'an Siraj. সর্বস্বত্ব সংরক্ষিত।</span><span>ইলম · তাহকিক · আমানত</span></div>
+  </footer>
+
+  <dialog id="articleDialog" class="article-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="বন্ধ করুন">×</button>
+    <p class="section-kicker" id="dialogCategory"></p>
+    <h2 id="dialogTitle"></h2>
+    <p class="dialog-meta" id="dialogMeta"></p>
+    <div id="dialogBody" class="dialog-body"></div>
+    <button class="gold-button" id="copyArticle">লেখার লিংকসহ কপি করুন</button>
+  </dialog>
+  <script src="articles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
