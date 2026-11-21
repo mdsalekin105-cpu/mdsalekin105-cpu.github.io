@@ -130,3 +130,40 @@ footer {
   }
   }
   
+
+/* Classical Arabic Cover Ornaments */
+
+.hero-inner::before,
+.hero-inner::after {
+  position: absolute;
+  top: -65px;
+  color: #d9c391;
+  font-family: "Molvi AM", serif;
+  font-size: 27px;
+  opacity: .85;
+  content: "۞";
+}
+
+.hero-inner::before {
+  left: -35px;
+}
+
+.hero-inner::after {
+  right: -35px;
+}
+
+.hero-bottom::before,
+.hero-bottom::after {
+  position: absolute;
+  color: #d9c391;
+  font-size: 22px;
+  content: "❧";
+}
+
+.hero-bottom::before {
+  left: -45px;
+}
+
+.hero-bottom::after {
+  right: -45px;
+}
